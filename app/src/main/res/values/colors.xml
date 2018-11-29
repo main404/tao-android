@@ -1,6 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#FF5959</color>
+    <color name="colorPrimaryDark">#FF5959</color>
+    <color name="colorAccent">#FF5959</color>
+
+    <!-- material design black font color -->
+    <color name="font_black_0">#212121</color>
+    <color name="font_black_1">#424242</color>
+    <color name="font_black_2">#616161</color>
+    <color name="font_black_3">#757575</color>
+    <color name="font_black_4">#9e9e9e</color>
+    <color name="font_black_5">#bdbdbd</color>
+    <color name="font_black_6">#e0e0e0</color>
+
+    <!-- common -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray">#808080</color>
+    <color name="transparent">#00000000</color>
+    <color name="half_transparent">#8f000000</color>
+
+    <color name="main_red">#FF5959</color>
+    <color name="main_black">#333</color>
+    <color name="window_background">#f2f2f2</color>
+
+    <color name="main_background">#F6F6F6</color>
+    <color name="list_divider_color">#c8c7cc</color>
+    <color name="list_item_background_pressed">#FCFCFC</color>
+
+    <!-- comm -->
+    <color name="comm_transparent">#00000000</color>
+    <color name="comm_white">#FFFFFF</color>
+    <color name="comm_black">#000000</color>
+    <color name="comm_yellow">#ffd022</color>
+    <color name="comm_bg">#f6f6f6</color>
+    <color name="comm_price">#ff5c5c</color>
+    <color name="comm_line">#dddddd</color>
+
+    <color name="common_bg">#f5f5f5</color>
+    <color name="common_black">#000000</color>
+    <color name="common_blue">#03a9f4</color>
+    <color name="common_blue_dark">#0288d1</color>
+    <color name="common_blue_light">#039be5</color>
+    <color name="common_disable">#d9d9d9</color>
+    <color name="common_divider">#d4d4d4</color>
+    <color name="common_gray">#dddddd</color>
+    <color name="common_purple">#d500f9</color>
+    <color name="common_red">#f11919</color>
+    <color name="common_white">#ffffff</color>
+    <color name="common_yellow">#fe9c2f</color>
+
+    <!-- background -->
+    <color name="bg">#FFF5F5F5</color>
+    <color name="bg_pressed">#FFF2F2F2</color>
+
+    <!-- text -->
+    <color name="comm_text_gray_light">#999999</color>
+    <color name="comm_text_gray">#666666</color>
+    <color name="comm_text_gray_dark">#333333</color>
+
+    <color name="textColor">#333333</color>
+    <color name="infoTextColor">#999999</color>
+
+    <color name="text_title_color">#111111</color>
+    <color name="text_desc_color">#6a6a6a</color>
+    <color name="text_secondary_color">#9d9d9d</color>
+
+    <color name="font_red">#FF5959</color>
+    <color name="font_2">#222222</color>
+    <color name="font_6">#666666</color>
+    <color name="font_9">#999999</color>
+
+    <color name="text_gray">#ffcccccc</color>
+
+    <!-- press -->
+    <color name="bg_press">#ebebeb</color>
+    <color name="bg_press_material">#d4d4d4</color>
+
+    <!-- 线条 -->
+    <color name="divide_line">#D8DDE4</color>
+
+    <!-- Nav -->
+    <color name="user_info_message_notice">#E35B5A</color>
+
+    <!-- 登录模块-->
+    <color name="login_line_color">#cccccc</color>
+    <color name="login_input_active">#ff5959</color>
+    <color name="login_other_color">#cacaca</color>
+    <color name="account_input_bg_color">#ffffff</color>
+    <color name="account_lock_bg">#ffff5959</color>
+    <color name="account_lock_font_color">#7fffffff</color>
+    <color name="account_input_color">#c9c9c9</color>
+    <color name="account_pressed_true">#ee4e4f</color>
+    <color name="font_white">#ffffffff</color>
+    <color name="font_white_disable">#7fffffff</color>
+    <color name="login_button_normal">#ff5959</color>
+    <color name="login_button_press">#ee4e4f</color>
+
+    <!-- TopBar -->
+    <color name="titlebar_color">#FFFFFF</color>
+    <color name="edit_save_btn_color_disable">#ffa8c6ed</color>
+    <color name="edit_save_btn_color_click">#808080</color>
+
 </resources>

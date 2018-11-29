@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size_18">18.0dip</dimen>
+    <dimen name="text_size_16">16.0dip</dimen>
+    <dimen name="text_size_15">15.0dip</dimen>
+    <dimen name="text_size_14">14.0dip</dimen>
+    <dimen name="text_size_13">13.0dip</dimen>
+    <dimen name="text_size_12">12.0dip</dimen>
+    <dimen name="text_size_11">11.0dip</dimen>
+    <dimen name="text_size_10">10.0dip</dimen>
+    <dimen name="space_100">100.0dip</dimen>
+    <dimen name="space_49">49dip</dimen>
+    <dimen name="space_35">35.0dip</dimen>
+    <dimen name="space_16">16.0dip</dimen>
+    <dimen name="space_15">15.0dip</dimen>
+    <dimen name="space_14">14.0dip</dimen>
+    <dimen name="space_13">13.0dip</dimen>
+    <dimen name="space_12">12.0dip</dimen>
+    <dimen name="space_10">10.0dip</dimen>
+    <dimen name="space_8">8.0dip</dimen>
+    <dimen name="space_6">6.0dip</dimen>
+    <dimen name="space_5">5.0dip</dimen>
+    <dimen name="space_4">4.0dip</dimen>
+    <dimen name="space_3">3.0dip</dimen>
+
+    <dimen name="common_divider_height">1px</dimen>
+    <dimen name="common_divider_width">1px</dimen>
+    <dimen name="common_header_bar_height">50dp</dimen>
+    <dimen name="common_icon_height">60dp</dimen>
+    <dimen name="common_icon_width">60dp</dimen>
+    <dimen name="common_line_height">50dp</dimen>
+    <dimen name="common_margin">15dp</dimen>
+    <dimen name="common_margin_middle">10dp</dimen>
+    <dimen name="common_margin_small">5dp</dimen>
+    <dimen name="common_padding">15dp</dimen>
+    <dimen name="common_padding_middle">10dp</dimen>
+    <dimen name="common_padding_small">5dp</dimen>
+    <dimen name="common_radius">6dp</dimen>
+    <dimen name="common_border_size">1px</dimen>
+
+    <dimen name="text_small_size">12sp</dimen>
+    <dimen name="text_middle_size">14sp</dimen>
+    <dimen name="text_big_size">16sp</dimen>
+    <dimen name="text_large_size">18sp</dimen>
+
+    <dimen name="padding_15">15dp</dimen>
+    <dimen name="padding_12">15dp</dimen>
+    <dimen name="padding_10">10dp</dimen>
+    <dimen name="padding_14">14dp</dimen>
+
+    <!-- Divide -->
+    <dimen name="divide_height">0.5dp</dimen>
+
+    <!-- TopBar -->
+    <dimen name="topbar_content_height">50.0dip</dimen>
+    <dimen name="btn_topbar_layout_minwidth">80.0dip</dimen>
+    <dimen name="btn_topbar_marginHorizontal">10.0dip</dimen>
+    <dimen name="btn_topbar_minwidth">58.0dip</dimen>
+    <dimen name="btn_topbar_paddingHorizontal">10.0dip</dimen>
+    <dimen name="SmallButtonHeight">32.0dip</dimen>
+    <dimen name="size_top_title_size">20.0dip</dimen>
+
+    <!-- Dialog -->
+    <dimen name="dialog_margin">7.0dip</dimen>
+    <dimen name="global_padding">8.0dip</dimen>
+    <dimen name="global_dialog_padding">15.0dip</dimen>
+    <dimen name="text_regular_primary_size">14.0dip</dimen>
+    <dimen name="text_large_secondary_size">12.0dip</dimen>
+    <dimen name="text_large_primary_size">16.0dip</dimen>
+
+</resources>

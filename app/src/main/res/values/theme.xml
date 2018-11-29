@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--base theme light-->
+    <style name="Base.App.Theme.Light" parent="@style/Theme.AppCompat.Light">
+        <!--color primary-->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+
+        <!--button style-->
+        <item name="android:buttonStyle">@style/App.Widget.Button</item>
+
+        <!--window style-->
+        <item name="elevation">0dp</item>
+        <item name="android:windowBackground">@color/window_background</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="Base.App.Theme.NoTitle" parent="Base.App.Theme.Light">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!--button-->
+    <style name="App.Widget.Button" parent="Widget.AppCompat.Button">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@color/trans</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="elevation">0dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+</resources>

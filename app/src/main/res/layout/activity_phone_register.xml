@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/ly_bar"
+        layout="@layout/login_navigation_bar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <include layout="@layout/login_baselayout_title" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/countryCode"
+                    android:layout_width="55dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/padding_15"
+                    android:focusable="false"
+                    android:gravity="center_vertical"
+                    android:text="+86"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp" />
+
+                <View
+                    style="@style/DivideLineVer"
+                    android:layout_height="20dp" />
+
+                <com.taotete.app.widget.LoginEditText
+                    android:id="@+id/et_register_tel"
+                    style="@style/LoginEdit"
+                    app:hint="手机号"
+                    app:loginInput="number"
+                    app:topLine="false" />
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/divide_1"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/padding_15"
+                android:layout_marginRight="@dimen/padding_15" />
+
+            <com.taotete.app.widget.LoginEditText
+                android:id="@+id/et_register_pwd"
+                style="@style/LoginEdit"
+                app:hint="设置密码"
+                app:showPassword="true"
+                app:loginInput="password"
+                app:topLine="false" />
+
+            <include
+                layout="@layout/divide_1"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/padding_15"
+                android:layout_marginRight="@dimen/padding_15" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.taotete.app.widget.LoginEditText
+                    android:id="@+id/et_register_auth_code"
+                    style="@style/LoginEdit"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:visibility="visible"
+                    app:hint="手机验证码"
+                    app:loginInput="number"
+                    app:topLine="false" />
+
+                <View
+                    style="@style/DivideLineVer"
+                    android:layout_height="15dp" />
+
+                <com.taotete.app.widget.ValidePhoneView
+                    android:id="@+id/tv_register_sms_call"
+                    style="@style/ValidePhoneView" />
+
+            </LinearLayout>
+
+            <com.taotete.app.widget.LoginEditText
+                android:id="@+id/et_register_captcha"
+                style="@style/LoginEdit"
+                app:captcha="true"
+                app:hint="验证码"
+                android:visibility="gone" />
+
+            <include
+                layout="@layout/divide_1"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/padding_15"
+                android:layout_marginRight="@dimen/padding_15" />
+
+            <Button
+                android:id="@+id/bt_register_submit"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/login_button"
+                android:elevation="0dp"
+                android:outlineProvider="none"
+                android:text="@string/register"
+                android:textColor="@color/font_login_button"
+                android:textSize="@dimen/font_18"
+                android:translationZ="0dp"
+                tools:targetApi="lollipop"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

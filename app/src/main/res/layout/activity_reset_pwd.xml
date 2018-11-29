@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/ly_reset_bar"
+        layout="@layout/login_navigation_bar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/lay_reset_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <include layout="@layout/login_baselayout_title" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <com.taotete.app.widget.LoginEditText
+                    android:id="@+id/et_reset_pwd"
+                    app:topLine="false"
+                    style="@style/LoginEdit"
+                    app:showPassword="true"
+                    app:loginInput="password"
+                    app:hint="输入密码" />
+
+                <com.taotete.app.widget.LoginEditText
+                    android:id="@+id/et_reset_repwd"
+                    style="@style/LoginEdit"
+                    app:showPassword="true"
+                    app:loginInput="password"
+                    app:hint="再次输入密码" />
+
+                <include
+                    layout="@layout/divide_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="@dimen/padding_15"
+                    android:layout_marginRight="@dimen/padding_15" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_reset_submit"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/login_button"
+                android:elevation="0dp"
+                android:outlineProvider="none"
+                android:text="@string/reset_pwd_submit"
+                android:textColor="@color/font_login_button"
+                android:textSize="@dimen/font_18"
+                android:translationZ="0dp"
+                tools:targetApi="lollipop"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
