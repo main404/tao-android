@@ -48,6 +48,11 @@ dependencies {
     compile 'com.github.maning0303:MNProgressHUD:V1.1.4'
     // 状态栏
     compile 'com.jaeger.statusbarutil:library:1.5.1'
+    // 下拉刷新框架
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-15'
+    compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-15'
     // 水波纹
     compile 'com.scwang.wave:MultiWaveHeader:1.0.0-alpha-1'
+    // 选择器
+    compile 'com.contrarywind:Android-PickerView:4.1.6'
 }

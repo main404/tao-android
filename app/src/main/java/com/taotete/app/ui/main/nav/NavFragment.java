@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import com.taotete.app.R;
 import com.taotete.app.ui.base.fragments.BaseFragment;
 import com.taotete.app.ui.base.fragments.NullFragment;
+import com.taotete.app.ui.category.CategoryFragment;
 import com.taotete.app.ui.user.fragments.UserInfoFragment;
 
 import net.oschina.common.widget.drawable.shape.BorderShape;
@@ -71,7 +72,7 @@ public class NavFragment extends BaseFragment implements View.OnClickListener {
 
         mNavTweet.init(R.drawable.tab_icon_me,
                 R.string.main_tab_name_category,
-                NullFragment.class);
+                CategoryFragment.class);
 
         mNavExplore.init(R.drawable.tab_icon_me,
                 R.string.main_tab_name_cart,

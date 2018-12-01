@@ -1,6 +1,7 @@
 package com.taotete.app.ui.settting;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -11,6 +12,7 @@ import com.taotete.app.ui.base.activities.BaseActivity;
 import com.taotete.app.utils.UIUtils;
 import com.taotete.app.widget.TopBarView;
 import com.taotete.app.ui.account.AccountHelper;
+import com.taotete.app.widget.dialog.CommonDialog;
 
 import butterknife.Bind;
 import butterknife.OnClick;
@@ -80,11 +82,23 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
      * 举报帖子
      */
     public void onExitClick() {
-        AccountHelper.clear();
-        UIUtils.showToast(R.string.logout_success_hint);
-        mCancel.setVisibility(View.INVISIBLE);
-        mSettingLineTop.setVisibility(View.INVISIBLE);
-        mSettingLineBottom.setVisibility(View.INVISIBLE);
+        CommonDialog dialog = new CommonDialog(this);
+        dialog.setCancelable(true);
+        dialog.setMessage("是否退出登录?");
+        dialog.setCanceledOnTouchOutside(true);
+        dialog.setNegativeButton(R.string.cancel, null);
+        dialog.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+                AccountHelper.clear();
+                UIUtils.showToast(R.string.logout_success_hint);
+                mCancel.setVisibility(View.INVISIBLE);
+                mSettingLineTop.setVisibility(View.INVISIBLE);
+                mSettingLineBottom.setVisibility(View.INVISIBLE);
+            }
+        });
+        dialog.show();
     }
 
 }

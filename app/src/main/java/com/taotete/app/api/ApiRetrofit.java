@@ -5,6 +5,9 @@ import com.google.gson.GsonBuilder;
 import com.taotete.app.api.base.BaseApiRetrofit;
 import com.taotete.app.model.base.ResultBean;
 import com.taotete.app.model.request.AddAddressRequest;
+import com.taotete.app.model.request.GetCategoryRequest;
+import com.taotete.app.model.request.DeleteAddressRequest;
+import com.taotete.app.model.request.EditAddressRequest;
 import com.taotete.app.model.request.GetAddressListRequest;
 import com.taotete.app.model.request.LoginRequest;
 import com.taotete.app.model.request.RegisterRequest;
@@ -14,6 +17,7 @@ import com.taotete.app.model.request.UserInfoRequest;
 import com.taotete.app.model.request.VerifyCodeRequest;
 import com.taotete.app.model.response.AddAddressResponse;
 import com.taotete.app.model.response.AddressListResponse;
+import com.taotete.app.model.response.CategoryResponse;
 import com.taotete.app.model.response.LoginResponse;
 import com.taotete.app.model.response.RegisterResponse;
 import com.taotete.app.model.response.ResetPwdResponse;
@@ -140,8 +144,8 @@ public class ApiRetrofit extends BaseApiRetrofit {
      * 删（收货地址）
      * @param id
      */
-    public void deleteAddress(int id) {
-
+    public Observable<ResultBean> deleteAddress(String token, int id) {
+        return mApi.deleteAddress(getRequestBody(new DeleteAddressRequest(token, id)));
     }
 
     /**
@@ -153,15 +157,23 @@ public class ApiRetrofit extends BaseApiRetrofit {
      * @param address
      * @param isDefault
      */
-    public void editAddress(int id, String userName, String mobile, String area, String address, int isDefault) {
-
+    public Observable<ResultBean> editAddress(String token, int id, String userName, String mobile, String area, String address, int isDefault) {
+        return mApi.editAddress(getRequestBody(new EditAddressRequest(token, id, userName, mobile, area, address, isDefault)));
     }
 
     /**
      * 查（收货地址列表）
      */
     public Observable<ResultBean<AddressListResponse>> getAddressList(String token) {
-        return mApi.getAddressList(new GetAddressListRequest(token));
+        return mApi.getAddressList(getRequestBody(new GetAddressListRequest(token)));
+    }
+
+    /**
+     * 分类列表
+     * @return
+     */
+    public Observable<ResultBean<CategoryResponse>> getCategoryList() {
+        return mApi.getCategoryList(getRequestBody(new GetCategoryRequest()));
     }
 
     // 综合 销量 价格 新品

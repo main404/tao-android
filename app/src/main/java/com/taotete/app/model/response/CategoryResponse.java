@@ -4,41 +4,51 @@ import java.util.List;
 
 public class CategoryResponse {
 
-    private int code;
-    private ResultBean result;
+    private List<TopBean> category;
 
-    public int getCode() {
-        return code;
+    public List<TopBean> getTop() {
+        return category;
     }
 
-    public void setCode(int code) {
-        this.code = code;
+    public void setTop(List<TopBean> top) {
+        this.category = top;
     }
 
-    public ResultBean getResult() {
-        return result;
-    }
+    public static class TopBean {
 
-    public void setResult(ResultBean result) {
-        this.result = result;
-    }
+        private int id;
+        private String name;
+        private List<SecondBean> second;
 
-    public static class ResultBean {
-        private List<TopBean> top;
-
-        public List<TopBean> getTop() {
-            return top;
+        public int getId() {
+            return id;
         }
 
-        public void setTop(List<TopBean> top) {
-            this.top = top;
+        public void setId(int id) {
+            this.id = id;
         }
 
-        public static class TopBean {
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public List<SecondBean> getSecond() {
+            return second;
+        }
+
+        public void setSecond(List<SecondBean> second) {
+            this.second = second;
+        }
+
+        public static class SecondBean {
 
             private int id;
             private String name;
-            private List<SecondBean> second;
+            private String img_url;
 
             public int getId() {
                 return id;
@@ -56,43 +66,12 @@ public class CategoryResponse {
                 this.name = name;
             }
 
-            public List<SecondBean> getSecond() {
-                return second;
+            public String getImgUrl() {
+                return img_url;
             }
 
-            public void setSecond(List<SecondBean> second) {
-                this.second = second;
-            }
-
-            public static class SecondBean {
-
-                private int id;
-                private String name;
-                private String imgUrl;
-
-                public int getId() {
-                    return id;
-                }
-
-                public void setId(int id) {
-                    this.id = id;
-                }
-
-                public String getName() {
-                    return name;
-                }
-
-                public void setName(String name) {
-                    this.name = name;
-                }
-
-                public String getImgUrl() {
-                    return imgUrl;
-                }
-
-                public void setImgUrl(String imgUrl) {
-                    this.imgUrl = imgUrl;
-                }
+            public void setImgUrl(String imgUrl) {
+                this.img_url = imgUrl;
             }
         }
     }

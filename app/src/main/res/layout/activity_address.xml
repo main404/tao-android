@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.taotete.app.widget.TopBarView
+        android:id="@+id/topbar"
+        style="@style/MatchWrap"/>
+
+    <View style="@style/h_line" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/common_bg">
+
+            <com.scwang.smartrefresh.layout.header.ClassicsHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                style="@style/commonRecyclerView" />
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <com.taotete.app.widget.empty.EmptyLayout
+            android:id="@+id/error_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+</LinearLayout>

@@ -59,6 +59,11 @@
     <color name="comm_text_gray">#666666</color>
     <color name="comm_text_gray_dark">#333333</color>
 
+    <color name="text_dark">#af000000</color>
+    <color name="text_light">#3f000000</color>
+    <color name="text_light_dark">#333333</color>
+    <color name="text_normal">#666666</color>
+
     <color name="textColor">#333333</color>
     <color name="infoTextColor">#999999</color>
 
@@ -66,24 +71,31 @@
     <color name="text_desc_color">#6a6a6a</color>
     <color name="text_secondary_color">#9d9d9d</color>
 
+    <color name="text_gray">#ffcccccc</color>
+
     <color name="font_red">#FF5959</color>
     <color name="font_2">#222222</color>
     <color name="font_6">#666666</color>
     <color name="font_9">#999999</color>
 
-    <color name="text_gray">#ffcccccc</color>
+    <!-- 线条 -->
+    <color name="divide_line">#D8DDE4</color>
 
     <!-- press -->
     <color name="bg_press">#ebebeb</color>
     <color name="bg_press_material">#d4d4d4</color>
 
-    <!-- 线条 -->
-    <color name="divide_line">#D8DDE4</color>
+    <!-- 对话框 -->
+    <color name="ui_dialog_divider">@color/list_divider_color</color>
+    <color name="ui_dialog_list_text">#5E5E5E</color>
+    <color name="light_gray">#1a000000</color>
+    <color name="lightest_gray">#0a000000</color>
+    <color name="bg_touch">@color/lightest_gray</color>
 
     <!-- Nav -->
     <color name="user_info_message_notice">#E35B5A</color>
 
-    <!-- 登录模块-->
+    <!-- 登录模块 -->
     <color name="login_line_color">#cccccc</color>
     <color name="login_input_active">#ff5959</color>
     <color name="login_other_color">#cacaca</color>

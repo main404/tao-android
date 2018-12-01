@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MatchMatch.Vertical.Common">
+
+    <View
+        android:id="@+id/viewStatusBar"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/lay_8"
+        android:paddingLeft="@dimen/lay_8"
+        android:paddingRight="@dimen/lay_8"
+        android:paddingTop="@dimen/lay_8">
+
+        <LinearLayout
+            android:id="@+id/ll_search"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="36dp"
+            android:background="@drawable/shape_search_view"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/size_14"
+                android:layout_height="@dimen/size_14"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:src="@mipmap/ic_search" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:text="搜索商品"
+                android:textColor="@color/text_secondary_color"
+                android:textSize="@dimen/font_16" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View style="@style/h_line" />
+
+    <LinearLayout style="@style/MatchMatch.Horizontal">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_top_category"
+            style="@style/commonRecyclerView"
+            android:layout_weight="5"/>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/divide_line" />
+
+        <LinearLayout
+            style="@style/MatchMatch.Vertical"
+            android:layout_weight="2">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_secont_category"
+                style="@style/commonRecyclerView"
+                android:background="@color/white"
+                android:paddingLeft="12dp"
+                tools:ignore="RtlHardcoded,RtlSymmetry"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

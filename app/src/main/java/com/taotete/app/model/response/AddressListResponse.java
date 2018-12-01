@@ -1,5 +1,6 @@
 package com.taotete.app.model.response;
 
+import java.io.Serializable;
 import java.util.List;
 
 public class AddressListResponse {
@@ -14,7 +15,7 @@ public class AddressListResponse {
         this.list = list;
     }
 
-    public static class ListBean {
+    public static class ListBean implements Serializable {
         private int id;
         private String name;
         private String mobile;

@@ -7,7 +7,8 @@
     <string name="topbar_title_setting">设置</string>
     <string name="topbar_title_my_data">资料</string>
     <string name="topbar_title_modify_data">修改资料</string>
-    <string name="topbar_title_modify_address">收货地址</string>
+    <string name="topbar_title_add_address">新增收货地址</string>
+    <string name="topbar_title_modify_address">修改收货地址</string>
     <string name="topbar_title_address">地址管理</string>
 
     <!-- Nav -->
@@ -15,13 +16,6 @@
     <string name="main_tab_name_category">分类</string>
     <string name="main_tab_name_my">我的</string>
     <string name="main_tab_name_cart">购物车</string>
-
-    <!-- 用户中心 -->
-    <string name="tab_name_pay">待付款</string>
-    <string name="message">我的消息</string>
-    <string name="setting">设置</string>
-    <string name="address">收货地址</string>
-    <string name="favorite">我的收藏</string>
 
     <!--登录专用-->
     <string name="login">登录</string>
@@ -64,10 +58,24 @@
     <string name="message_pwd_error">密码错误</string>
     <string name="message_username_null">用户名未填写！！！</string>
 
+    <!-- 用户中心 -->
+    <string name="tab_name_pay">待付款</string>
+    <string name="message">我的消息</string>
+    <string name="setting">设置</string>
+    <string name="address">收货地址</string>
+    <string name="favorite">我的收藏</string>
+
+    <!-- comment -->
+    <string name="cancel">取消</string>
+    <string name="ok">确定</string>
+    <string name="commit">提交</string>
+    <string name="modify">修改</string>
+
     <!-- Error View -->
     <string name="error_code">异常码：</string>
     <string name="error_view_no_data">暂无内容</string>
     <string name="error_view_loading">加载中…</string>
+    <string name="error_view_loading_address">获取收货地址中…</string>
     <string name="error_view_load_error_click_to_refresh">内容加载失败\r\n点击重新加载</string>
     <string name="error_view_network_error_click_to_refresh">没有可用的网络</string>
     <string name="tip_network_error">没有可用的网络</string>
@@ -76,12 +84,29 @@
     <string name="footer_type_error">加载失败</string>
     <string name="footer_type_net_error">网络错误</string>
 
+    <!-- state -->
+    <string name="state_network_error">网络错误</string>
+    <string name="state_loading">正在加载…</string>
+    <string name="state_not_more">没有更多数据</string>
+    <string name="state_load_error">加载失败</string>
+    <string name="state_refreshing">正在刷新</string>
+    <string name="state_load">正在加载…</string>
+    <string name="state_loading_error">数据加载中&#8230;</string>
+    <string name="state_submit">正在提交中&#8230;</string>
+
     <!-- 设置中心 -->
     <string name="clean_cache">清理缓存</string>
     <string name="update">检查更新</string>
     <string name="about" translatable="false">关于我们</string>
     <string name="feedback">意见反馈</string>
     <string name="setting_exit">退出登录</string>
-    <string name="logout_success_hint">退出成功</string>
+    <string name="logout_success_hint">退出登录成功</string>
+
+    <!-- 收货地址 -->
+    <string name="address_username_hint">收件人姓名</string>
+    <string name="address_phone_hint">手机号码</string>
+    <string name="address_area_hint">所在地区</string>
+    <string name="address_detail_hint">街道、小区门牌等详细地址</string>
+    <string name="topbar_title_product_list">商品列表</string>
 
 </resources>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <com.taotete.app.widget.TopBarView
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View style="@style/h_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_username"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_username"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/address_username_hint"
+                android:inputType="text"
+                android:maxLines="1"
+                android:minLines="1"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/login_line_color"
+                android:textCursorDrawable="@drawable/edittext_cursor"
+                android:textSize="@dimen/font_16" />
+
+            <ImageView
+                android:id="@+id/iv_username_del"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:contentDescription="@null"
+                android:scaleType="fitCenter"
+                android:visibility="gone"
+                app:srcCompat="@mipmap/ic_clear"/>
+        </LinearLayout>
+
+        <View style="@style/h_line" />
+
+        <LinearLayout
+            android:id="@+id/ll_phone"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/address_phone_hint"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:minLines="1"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/login_line_color"
+                android:textCursorDrawable="@drawable/edittext_cursor"
+                android:textSize="@dimen/font_16"/>
+
+            <ImageView
+                android:id="@+id/iv_phone_del"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:contentDescription="@null"
+                android:scaleType="fitCenter"
+                android:visibility="gone"
+                app:srcCompat="@mipmap/ic_clear"/>
+
+        </LinearLayout>
+
+        <View style="@style/h_line" />
+
+        <LinearLayout
+            android:id="@+id/ll_area"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_area"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/address_area_hint"
+                android:maxLines="1"
+                android:minLines="1"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/login_line_color"
+                android:textSize="@dimen/font_16"/>
+
+            <ImageView
+                android:id="@+id/iv_area_del"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:contentDescription="@null"
+                android:scaleType="fitCenter"
+                android:visibility="gone"
+                app:srcCompat="@mipmap/ic_clear"/>
+
+        </LinearLayout>
+
+        <View style="@style/h_line" />
+
+        <LinearLayout
+            android:id="@+id/ll_address"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_address"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/address_detail_hint"
+                android:inputType="text"
+                android:maxLines="1"
+                android:minLines="1"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/login_line_color"
+                android:textCursorDrawable="@drawable/edittext_cursor"
+                android:textSize="@dimen/font_16"/>
+
+            <ImageView
+                android:id="@+id/iv_address_del"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:contentDescription="@null"
+                android:scaleType="fitCenter"
+                android:visibility="gone"
+                app:srcCompat="@mipmap/ic_clear"/>
+
+        </LinearLayout>
+
+        <View style="@style/h_line" />
+
+    </LinearLayout>
+
+</LinearLayout>
