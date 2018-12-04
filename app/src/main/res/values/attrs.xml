@@ -13,4 +13,11 @@
         </attr>
         <attr name="digits" format="string" />
     </declare-styleable>
+
+    <declare-styleable name="PicturesLayout">
+        <attr name="verticalSpace" format="dimension" />
+        <attr name="horizontalSpace" format="dimension" />
+        <attr name="column" format="integer" />
+        <attr name="maxPictureSize" format="dimension" />
+    </declare-styleable>
 </resources>

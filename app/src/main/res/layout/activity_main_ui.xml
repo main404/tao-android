@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context="com.taotete.app.main.MainActivity">
+        tools:context="com.taotete.app.ui.main.MainActivity">
 
         <FrameLayout
             android:id="@+id/main_container"

@@ -1,0 +1,129 @@
+{
+  "id": "101",
+  "name": "Apple MacBook Pro 13.3英寸笔记本电脑 深空灰色 2018新款",
+  "description": "Apple MacBook Pro 13.3英寸笔记本电脑 深空灰色 2018新款",
+  "status": "1",
+  "image": "https://m.360buyimg.com/mobilecms/s750x750_jfs/t19960/20/1662777286/277967/615ccafb/5b4f0dd7Nf3eb96b8.jpg!q80.dpg.webp",
+  "sellingPrice": 1348800,
+  "originPrice": 1418800,
+  "currencyUnit": "¥",
+  "measurementUnit": "件",
+  "saleQuantity": 1335,
+  "stockQuantity": 10998,
+  "pics": [
+    "https://m.360buyimg.com/mobilecms/s750x750_jfs/t19960/20/1662777286/277967/615ccafb/5b4f0dd7Nf3eb96b8.jpg!q80.dpg.webp",
+    "https://m.360buyimg.com/mobilecms/s1265x1265_jfs/t23212/240/1049590393/117739/fe939687/5b4f0dcfNd58d6625.jpg!q70.dpg.webp",
+    "https://m.360buyimg.com/mobilecms/s1265x1265_jfs/t24493/257/1070168470/233231/807089d2/5b4f0ddeN541ffd44.jpg!q70.dpg.webp",
+    "https://m.360buyimg.com/mobilecms/s1265x1265_jfs/t22795/240/1062706195/66979/c8ba712a/5b4f0de4N4e7ca8b2.jpg!q70.dpg.webp"
+  ],
+  "medias": [
+    "https://img14.360buyimg.com/cms/jfs/t21763/248/2284778926/143334/d69d8a15/5b4eedd1N8dfa8c70.jpg!q70.dpg",
+    "https://img30.360buyimg.com/cms/jfs/t21976/219/2254636165/193266/369acd4d/5b4eedd1N444a1734.jpg!q70.dpg",
+    "https://img20.360buyimg.com/cms/jfs/t20239/95/2289984641/196288/50ff06e9/5b4eedd1Ne10b1d1f.jpg!q70.dpg",
+    "https://img20.360buyimg.com/cms/jfs/t23668/26/1077233030/234685/14859683/5b4eedd2N633b1743.jpg!q70.dpg"
+  ],
+  "skus": [
+    {
+      "id": "1",
+      "itemId": "101",
+      "image": "https://m.360buyimg.com/mobilecms/s750x750_jfs/t19960/20/1662777286/277967/615ccafb/5b4f0dd7Nf3eb96b8.jpg!q80.dpg.webp",
+      "originPrice": 1418800,
+      "sellingPrice": 1348800,
+      "stockQuantity": 21,
+      "attributes": [
+        {
+          "key": "颜色",
+          "value": "银色"
+        },
+        {
+          "key": "处理器",
+          "value": "2.3GHz 四核第八代 Intel Core i5"
+        },
+        {
+          "key": "存储设备",
+          "value": "256GB固态硬盘"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "itemId": "102",
+      "image": "https://m.360buyimg.com/mobilecms/s750x750_jfs/t19960/20/1662777286/277967/615ccafb/5b4f0dd7Nf3eb96b8.jpg!q80.dpg.webp",
+      "originPrice": 1418800,
+      "sellingPrice": 1348800,
+      "stockQuantity": 21,
+      "attributes": [
+        {
+          "key": "颜色",
+          "value": "银色"
+        },
+        {
+          "key": "处理器",
+          "value": "2.3GHz 四核第八代 Intel Core i5"
+        },
+        {
+          "key": "存储设备",
+          "value": "512GB固态硬盘"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "itemId": "103",
+      "image": "https://m.360buyimg.com/mobilecms/s750x750_jfs/t19960/20/1662777286/277967/615ccafb/5b4f0dd7Nf3eb96b8.jpg!q80.dpg.webp",
+      "originPrice": 1418800,
+      "sellingPrice": 1348800,
+      "stockQuantity": 21,
+      "attributes": [
+        {
+          "key": "颜色",
+          "value": "灰色"
+        },
+        {
+          "key": "处理器",
+          "value": "2.7GHz 四核第八代 Intel Core i7"
+        },
+        {
+          "key": "存储设备",
+          "value": "256GB固态硬盘"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "itemId": "104",
+      "image": "https://m.360buyimg.com/mobilecms/s750x750_jfs/t19960/20/1662777286/277967/615ccafb/5b4f0dd7Nf3eb96b8.jpg!q80.dpg.webp",
+      "originPrice": 1418800,
+      "sellingPrice": 1348800,
+      "stockQuantity": 21,
+      "attributes": [
+        {
+          "key": "颜色",
+          "value": "灰色"
+        },
+        {
+          "key": "处理器",
+          "value": "2.7GHz 四核第八代 Intel Core i7"
+        },
+        {
+          "key": "存储设备",
+          "value": "512GB固态硬盘"
+        }
+      ]
+    }
+  ],
+  "rating": {
+    "username": "神******师",
+    "rateTime": 1469281964000,
+    "rateType": 0,
+    "text": "",
+    "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
+    "pics": [
+      "https://img30.360buyimg.com/shaidan/jfs/t15976/60/150569224/60881/5fff3695/5a28ca57N94b026b3.jpg!q70.dpg",
+      "https://img30.360buyimg.com/shaidan/jfs/t13927/338/1777759582/82115/b26a9bc5/5a28ca58Na25b05ff.jpg!q70.dpg",
+      "https://img30.360buyimg.com/shaidan/jfs/t13666/22/1822041896/54384/8a585022/5a28ca54Ncafb92cc.jpg!q70.dpg",
+      "https://img30.360buyimg.com/shaidan/jfs/t14812/185/279064678/131024/20b97853/5a28ca58Nc46ff19b.jpg!q70.dpg",
+      "https://img30.360buyimg.com/shaidan/jfs/t12724/195/380318870/67780/73051df0/5a28ca5bNb72b4908.jpg!q70.dpg"
+    ]
+  }
+}

@@ -51,31 +51,42 @@
 
     <View style="@style/h_line" />
 
-    <LinearLayout style="@style/MatchMatch.Horizontal">
+    <FrameLayout style="@style/MatchMatch">
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/rv_top_category"
-            style="@style/commonRecyclerView"
-            android:layout_weight="5"/>
-
-        <View
-            android:layout_width="1px"
-            android:layout_height="match_parent"
-            android:background="@color/divide_line" />
-
-        <LinearLayout
-            style="@style/MatchMatch.Vertical"
-            android:layout_weight="2">
+        <LinearLayout style="@style/MatchMatch.Horizontal">
 
             <android.support.v7.widget.RecyclerView
-                android:id="@+id/rv_secont_category"
+                android:id="@+id/rv_top_category"
                 style="@style/commonRecyclerView"
-                android:background="@color/white"
-                android:paddingLeft="12dp"
-                tools:ignore="RtlHardcoded,RtlSymmetry"/>
+                android:layout_weight="5"/>
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/divide_line" />
+
+            <LinearLayout
+                style="@style/MatchMatch.Vertical"
+                android:layout_weight="2">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_secont_category"
+                    style="@style/commonRecyclerView"
+                    android:background="@color/white"
+                    android:paddingLeft="12dp"
+                    tools:ignore="RtlHardcoded,RtlSymmetry"/>
+
+            </LinearLayout>
 
         </LinearLayout>
 
-    </LinearLayout>
+        <com.taotete.app.widget.empty.EmptyLayout
+            android:id="@+id/error_layout"
+            style="@style/MatchMatch"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+
 
 </LinearLayout>
