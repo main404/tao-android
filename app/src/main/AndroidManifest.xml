@@ -38,6 +38,13 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".ui.user.data.MyDataActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.App.Theme.NoTitle" />
+
         <activity android:name=".ui.account.activity.LoginActivity"
             android:configChanges="keyboardHidden|orientation"
             android:launchMode="singleTop"
@@ -66,6 +73,8 @@
             android:windowSoftInputMode="stateHidden|adjustResize"
             android:theme="@style/Base.App.Theme.NoTitle" />
 
+
+
         <activity android:name=".ui.settting.SettingActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
@@ -82,6 +91,11 @@
             android:theme="@style/Base.App.Theme.NoTitle" />
 
         <activity android:name=".ui.product.ProductActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.App.Theme.NoTitle" />
+
+        <activity android:name=".ui.product.ProductsActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:theme="@style/Base.App.Theme.NoTitle" />

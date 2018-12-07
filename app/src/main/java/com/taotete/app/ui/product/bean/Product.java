@@ -1,11 +1,6 @@
 package com.taotete.app.ui.product.bean;
 
-import android.content.Context;
-
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 import com.taotete.app.ui.product.sku.bean.Sku;
-import com.taotete.app.utils.GetJsonDataUtil;
 
 import java.util.List;
 
@@ -15,22 +10,16 @@ public class Product {
     private String description;
     private String status;
     private String image;
-    private long sellingPrice;
-    private long originPrice;
-    private String currencyUnit;
-    private String measurementUnit;
-    private int saleQuantity;
-    private int stockQuantity;
+    private long selling_price;
+    private long origin_price;
+    private String currency_unit;
+    private String measurement_unit;
+    private int sale_quantity;
+    private int stock_quantity;
     private List<String> pics;
     private List<String> medias;
-    private List<Sku> skus;
+    private List<Sku> sku;
     private Rating rating;
-
-    public static Product get(Context context) {
-        String json = new GetJsonDataUtil().getJson(context, "product.json");
-        return new Gson().fromJson(json, new TypeToken<Product>() {
-        }.getType());
-    }
 
     public String getId() {
         return id;
@@ -73,51 +62,51 @@ public class Product {
     }
 
     public long getSellingPrice() {
-        return sellingPrice;
+        return selling_price;
     }
 
     public void setSellingPrice(long sellingPrice) {
-        this.sellingPrice = sellingPrice;
+        this.selling_price = sellingPrice;
     }
 
     public long getOriginPrice() {
-        return originPrice;
+        return origin_price;
     }
 
     public void setOriginPrice(long originPrice) {
-        this.originPrice = originPrice;
+        this.origin_price = originPrice;
     }
 
     public String getCurrencyUnit() {
-        return currencyUnit;
+        return currency_unit;
     }
 
     public void setCurrencyUnit(String currencyUnit) {
-        this.currencyUnit = currencyUnit;
+        this.currency_unit = currencyUnit;
     }
 
     public String getMeasurementUnit() {
-        return measurementUnit;
+        return measurement_unit;
     }
 
     public void setMeasurementUnit(String measurementUnit) {
-        this.measurementUnit = measurementUnit;
+        this.measurement_unit = measurementUnit;
     }
 
     public int getSaleQuantity() {
-        return saleQuantity;
+        return sale_quantity;
     }
 
     public void setSaleQuantity(int saleQuantity) {
-        this.saleQuantity = saleQuantity;
+        this.sale_quantity = saleQuantity;
     }
 
     public int getStockQuantity() {
-        return stockQuantity;
+        return stock_quantity;
     }
 
     public void setStockQuantity(int stockQuantity) {
-        this.stockQuantity = stockQuantity;
+        this.stock_quantity = stockQuantity;
     }
 
     public List<String> getPics() {
@@ -137,11 +126,11 @@ public class Product {
     }
 
     public List<Sku> getSkus() {
-        return skus;
+        return sku;
     }
 
     public void setSkus(List<Sku> skus) {
-        this.skus = skus;
+        this.sku = skus;
     }
 
     public Rating getRating() {

@@ -3,12 +3,14 @@ package com.taotete.app.api;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.taotete.app.api.base.BaseApiRetrofit;
+import com.taotete.app.model.Order;
 import com.taotete.app.model.base.ResultBean;
 import com.taotete.app.model.request.AddAddressRequest;
 import com.taotete.app.model.request.GetCategoryRequest;
 import com.taotete.app.model.request.DeleteAddressRequest;
 import com.taotete.app.model.request.EditAddressRequest;
 import com.taotete.app.model.request.GetAddressListRequest;
+import com.taotete.app.model.request.GetProductDetailRequest;
 import com.taotete.app.model.request.LoginRequest;
 import com.taotete.app.model.request.RegisterRequest;
 import com.taotete.app.model.request.ResetPwdRequest;
@@ -19,11 +21,13 @@ import com.taotete.app.model.response.AddAddressResponse;
 import com.taotete.app.model.response.AddressListResponse;
 import com.taotete.app.model.response.CategoryResponse;
 import com.taotete.app.model.response.LoginResponse;
+import com.taotete.app.model.response.ProductResponse;
 import com.taotete.app.model.response.RegisterResponse;
 import com.taotete.app.model.response.ResetPwdResponse;
 import com.taotete.app.model.response.SendCodeResponse;
 import com.taotete.app.model.response.UserInfo;
 import com.taotete.app.model.response.VerifyCodeResponse;
+import com.taotete.app.ui.product.bean.Product;
 import com.taotete.app.utils.LogUtils;
 
 import io.reactivex.Observable;
@@ -73,6 +77,8 @@ public class ApiRetrofit extends BaseApiRetrofit {
         RequestBody body = RequestBody.create(okhttp3.MediaType.parse("application/json; charset=utf-8"), route);
         return body;
     }
+
+    //////////////////////////////////// 用户模块 业务接口 ////////////////////////////////////////////
 
     /**
      * 发送验证码
@@ -131,6 +137,8 @@ public class ApiRetrofit extends BaseApiRetrofit {
         return mApi.getUserInfo(getRequestBody(new UserInfoRequest(token)));
     }
 
+    //////////////////////////////////// 收货地址 业务接口 ////////////////////////////////////////////
+
     /**
      * 增（收货地址）
      * @param area      地区
@@ -170,21 +178,93 @@ public class ApiRetrofit extends BaseApiRetrofit {
 
     /**
      * 分类列表
-     * @return
      */
     public Observable<ResultBean<CategoryResponse>> getCategoryList() {
         return mApi.getCategoryList(getRequestBody(new GetCategoryRequest()));
     }
 
-    // 综合 销量 价格 新品
+    /**
+     * 添加商品购物车
+     */
+    public void addCart() {
+
+    }
 
     /**
-     *
-     * @param order   0  | 按默认排序方式相关度
-     *                1  | 销量
-     *                2  | 按热度排序（评论、销量数）
-     *                3  | 按最新时间排序
-     * @param keyword 关键字
-     * @return
+     * 获取购物车列表
      */
+    public void getCartList() {
+
+    }
+
+    /**
+     * 删除购物车商品
+     */
+    public void deleteCartList() {
+
+    }
+
+    /**
+     * 提交购物车商品
+     */
+    public void submitCart() {
+
+    }
+
+    //////////////////////////////////// 商品 业务层 接口 ////////////////////////////////////////////
+
+    /**
+     * 获取商品详情
+     */
+    public Observable<ResultBean<ProductResponse>> getProductDetail(int productId) {
+        return mApi.getProductDetail(getRequestBody(new GetProductDetailRequest(productId)));
+    }
+
+    ////////////////////////////////////// 订单业务接口 //////////////////////////////////////////////
+
+    /**
+     * 根据ID查询订单
+     */
+    public void getOrderById(int orderId) {
+
+    }
+
+    /**
+     * 提交订单
+     */
+    public void submitOrder(Order order) {
+
+    }
+
+    /**
+     * 根据状态查询订单列表
+     */
+    public void getOrderList() {
+
+    }
+
+    /**
+     * 取消订单
+     */
+    public void cancelOrder(int orderId) {
+
+    }
+
+    /**
+     * 确认订单
+     */
+    public void confirmOrder(int orderId) {
+
+    }
+
+    ////////////////////////////////////// 支付业务接口 //////////////////////////////////////////////
+
+    ////////////////////////////////////// 消息业务接口 //////////////////////////////////////////////
+
+    /**
+     * 获取消息列表
+     */
+    public void getMessageList() {
+
+    }
 }

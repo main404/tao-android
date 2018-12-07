@@ -1,5 +1,6 @@
 package com.taotete.app.ui.product;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Paint;
@@ -13,21 +14,31 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.jaeger.library.StatusBarUtil;
+import com.maning.mndialoglibrary.MProgressDialog;
 import com.taotete.app.R;
+import com.taotete.app.api.ApiRetrofit;
+import com.taotete.app.model.base.ResultBean;
+import com.taotete.app.model.response.ProductResponse;
 import com.taotete.app.ui.base.activities.BaseActivity;
 import com.taotete.app.ui.product.bean.Product;
 import com.taotete.app.ui.product.sku.bean.Sku;
 import com.taotete.app.ui.product.sku.bean.SkuAttribute;
+import com.taotete.app.utils.LogUtils;
 import com.taotete.app.utils.NumberUtils;
+import com.taotete.app.utils.UIUtils;
 import com.taotete.app.utils.ViewUtils;
 import com.taotete.app.widget.PicturesLayout;
 import com.taotete.app.widget.ShowMaxImageView;
+import com.taotete.app.widget.empty.EmptyLayout;
 
 import java.util.List;
 
 import butterknife.Bind;
 import butterknife.OnClick;
 import cn.bingoogolapple.bgabanner.BGABanner;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.functions.Consumer;
+import io.reactivex.schedulers.Schedulers;
 
 /**
  * 商品详情
@@ -61,6 +72,9 @@ public class ProductActivity extends BaseActivity implements View.OnClickListene
     @Bind(R.id.ll_medias)
     LinearLayout mLayoutMedias;
 
+    @Bind(R.id.error_layout)
+    EmptyLayout mErrorLayout;
+
     @Bind(R.id.view_action_back_bg)
     View viewActionBackBg;
     @Bind(R.id.view_action_more_bg)
@@ -93,7 +107,38 @@ public class ProductActivity extends BaseActivity implements View.OnClickListene
     @Override
     protected void initData() {
         super.initData();
-        product = Product.get(this);
+        requsetData();
+    }
+
+    @SuppressLint("CheckResult")
+    private void requsetData() {
+        mErrorLayout.setErrorType(EmptyLayout.NETWORK_LOADING);
+        ApiRetrofit.getInstance().getProductDetail(1)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Consumer<ResultBean<ProductResponse>>() {
+                    @Override
+                    public void accept(ResultBean<ProductResponse> productResponseResultBean) throws Exception {
+                        if (productResponseResultBean.isSuccess()) {
+                            fillUI(productResponseResultBean.getResult().getProduct());
+                            mErrorLayout.setErrorType(EmptyLayout.HIDE_LAYOUT);
+                        } else {
+                            UIUtils.showToast(productResponseResultBean.getMessage());
+                            mErrorLayout.setErrorType(EmptyLayout.NETWORK_ERROR);
+                        }
+                    }
+                }, new Consumer<Throwable>() {
+                    @Override
+                    public void accept(Throwable throwable) throws Exception {
+                        LogUtils.e(throwable.getLocalizedMessage());
+                        UIUtils.showToast(throwable.getLocalizedMessage());
+                        mErrorLayout.setErrorType(EmptyLayout.NETWORK_ERROR);
+                    }
+                });
+    }
+
+    private void fillUI(Product result) {
+        product = result;
         banner.setAdapter(new BGABanner.Adapter() {
             @Override
             public void fillBannerItem(BGABanner banner, View itemView, @Nullable Object model, int position) {
@@ -111,7 +156,7 @@ public class ProductActivity extends BaseActivity implements View.OnClickListene
             tvOriginPrice.setText(String.format(priceFormat, NumberUtils.formatNumber(product.getSellingPrice() / 100)));
         }
         banner.setData(product.getPics(), null);
-        mLayoutFlow.setImage(product.getRating().getPics());
+//        mLayoutFlow.setImage(product.getRating().getPics());
         mLayoutMedias.removeAllViews();
         for (String medias : product.getMedias()) {
             ShowMaxImageView imageView = new ShowMaxImageView(this);
@@ -141,6 +186,13 @@ public class ProductActivity extends BaseActivity implements View.OnClickListene
         } else {
             tvSkuInfo.setText("请选择：" + product.getSkus().get(0).getAttributes().get(0).getKey());
         }
+    }
+
+    /**
+     * 加载购物车输了
+     */
+    public void loadCartSize() {
+
     }
 
     @OnClick({R.id.fl_action_back, R.id.ll_show_sku, R.id.ll_action_favor, R.id.btn_add_cart})
@@ -181,5 +233,12 @@ public class ProductActivity extends BaseActivity implements View.OnClickListene
             dialog.setCancelable(true);
         }
         dialog.show();
+    }
+
+    /**
+     * 加入购物车
+     */
+    private void addCart() {
+
     }
 }

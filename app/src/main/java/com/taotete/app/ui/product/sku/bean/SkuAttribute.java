@@ -4,38 +4,38 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class SkuAttribute implements Parcelable {
-    private String key;
-    private String value;
+    private String k;
+    private String v;
 
     public SkuAttribute() {
     }
 
     public SkuAttribute(String key, String value) {
-        this.key = key;
-        this.value = value;
+        this.k = key;
+        this.v = value;
     }
 
     public String getKey() {
-        return key;
+        return k;
     }
 
     public void setKey(String key) {
-        this.key = key;
+        this.k = key;
     }
 
     public String getValue() {
-        return value;
+        return v;
     }
 
     public void setValue(String value) {
-        this.value = value;
+        this.v = value;
     }
 
     @Override
     public String toString() {
         return "SkuAttribute{" +
-                "key='" + key + '\'' +
-                ", value='" + value + '\'' +
+                "key='" + k + '\'' +
+                ", value='" + v + '\'' +
                 '}';
     }
 
@@ -46,13 +46,13 @@ public class SkuAttribute implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(this.key);
-        dest.writeString(this.value);
+        dest.writeString(this.k);
+        dest.writeString(this.v);
     }
 
     protected SkuAttribute(Parcel in) {
-        this.key = in.readString();
-        this.value = in.readString();
+        this.k = in.readString();
+        this.v = in.readString();
     }
 
     public static final Creator<SkuAttribute> CREATOR = new Creator<SkuAttribute>() {

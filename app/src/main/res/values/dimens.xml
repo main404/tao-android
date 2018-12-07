@@ -68,4 +68,7 @@
     <dimen name="text_large_secondary_size">12.0dip</dimen>
     <dimen name="text_large_primary_size">16.0dip</dimen>
 
+    <!-- msg -->
+    <dimen name="msg_icon_height">45dip</dimen>
+    <dimen name="msg_icon_width">45dip</dimen>
 </resources>

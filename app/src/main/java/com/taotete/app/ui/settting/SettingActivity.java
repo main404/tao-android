@@ -84,7 +84,8 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
     public void onExitClick() {
         CommonDialog dialog = new CommonDialog(this);
         dialog.setCancelable(true);
-        dialog.setMessage("是否退出登录?");
+        dialog.setTitle("提示");
+        dialog.setMessage("是否登出账号?");
         dialog.setCanceledOnTouchOutside(true);
         dialog.setNegativeButton(R.string.cancel, null);
         dialog.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {

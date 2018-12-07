@@ -6,8 +6,6 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 import com.taotete.app.R;
 import com.taotete.app.api.ApiRetrofit;
 import com.taotete.app.model.base.ResultBean;
@@ -16,7 +14,7 @@ import com.taotete.app.ui.base.adapter.BaseRecyclerAdapter;
 import com.taotete.app.ui.base.fragments.BaseFragment;
 import com.taotete.app.ui.category.adapter.SecondCategoryAdapter;
 import com.taotete.app.ui.category.adapter.TopCategoryAdapter;
-import com.taotete.app.ui.product.ProductActivity;
+import com.taotete.app.ui.product.ProductsActivity;
 import com.taotete.app.widget.empty.EmptyLayout;
 
 import butterknife.Bind;
@@ -69,7 +67,7 @@ public class CategoryFragment extends BaseFragment implements View.OnClickListen
         mAdapterSecondCategory.setOnItemClickListener(new BaseRecyclerAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(int position, long itemId) {
-                ProductActivity.show(mContext);
+                ProductsActivity.show(mContext);
             }
         });
     }

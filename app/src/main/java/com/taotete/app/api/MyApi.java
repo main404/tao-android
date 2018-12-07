@@ -7,11 +7,13 @@ import com.taotete.app.model.response.AddAddressResponse;
 import com.taotete.app.model.response.AddressListResponse;
 import com.taotete.app.model.response.CategoryResponse;
 import com.taotete.app.model.response.LoginResponse;
+import com.taotete.app.model.response.ProductResponse;
 import com.taotete.app.model.response.RegisterResponse;
 import com.taotete.app.model.response.ResetPwdResponse;
 import com.taotete.app.model.response.SendCodeResponse;
 import com.taotete.app.model.response.UserInfo;
 import com.taotete.app.model.response.VerifyCodeResponse;
+import com.taotete.app.ui.product.bean.Product;
 
 import io.reactivex.Observable;
 import okhttp3.RequestBody;
@@ -61,4 +63,7 @@ public interface MyApi {
 
     @POST("fivepeopledev/web/public/api_v1/Init/get_category_list")
     Observable<ResultBean<CategoryResponse>> getCategoryList(@Body RequestBody body);
+
+    @POST("fivepeopledev/web/public/api_v1/Product/product_details")
+    Observable<ResultBean<ProductResponse>> getProductDetail(@Body RequestBody body);
 }

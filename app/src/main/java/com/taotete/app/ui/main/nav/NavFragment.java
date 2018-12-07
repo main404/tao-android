@@ -11,12 +11,13 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
-import android.widget.ImageView;
 
 import com.taotete.app.R;
 import com.taotete.app.ui.base.fragments.BaseFragment;
-import com.taotete.app.ui.base.fragments.NullFragment;
+import com.taotete.app.ui.cart.CartFragment;
 import com.taotete.app.ui.category.CategoryFragment;
+import com.taotete.app.ui.circle.CircleFragment;
+import com.taotete.app.ui.home.HomeFragment;
 import com.taotete.app.ui.user.fragments.UserInfoFragment;
 
 import net.oschina.common.widget.drawable.shape.BorderShape;
@@ -34,6 +35,8 @@ public class NavFragment extends BaseFragment implements View.OnClickListener {
     NavigationButton mNavNews;
     @Bind(R.id.nav_item_tweet)
     NavigationButton mNavTweet;
+    @Bind(R.id.nav_item_circle)
+    NavigationButton mNavCircle;
     @Bind(R.id.nav_item_explore)
     NavigationButton mNavExplore;
     @Bind(R.id.nav_item_me)
@@ -68,25 +71,27 @@ public class NavFragment extends BaseFragment implements View.OnClickListener {
 
         mNavNews.init(R.drawable.tab_icon_me,
                 R.string.main_tab_name_home,
-                NullFragment.class);
+                HomeFragment.class);
 
         mNavTweet.init(R.drawable.tab_icon_me,
                 R.string.main_tab_name_category,
                 CategoryFragment.class);
 
+        mNavCircle.init(R.drawable.tab_icon_me,
+                R.string.main_tab_name_circle,
+                CircleFragment.class);
+
         mNavExplore.init(R.drawable.tab_icon_me,
                 R.string.main_tab_name_cart,
-                NullFragment.class);
+                CartFragment.class);
 
         mNavMe.init(R.drawable.tab_icon_me,
                 R.string.main_tab_name_my,
                 UserInfoFragment.class);
 
-
     }
 
-    @OnClick({R.id.nav_item_news, R.id.nav_item_tweet,
-            R.id.nav_item_explore, R.id.nav_item_me})
+    @OnClick({R.id.nav_item_news, R.id.nav_item_tweet, R.id.nav_item_circle, R.id.nav_item_explore, R.id.nav_item_me})
     @Override
     public void onClick(View v) {
         if (v instanceof NavigationButton) {

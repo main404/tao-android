@@ -118,18 +118,27 @@ public class CommonDialog extends Dialog {
     }
 
     public void setMessage(Spanned spanned) {
-        TextView tvMessage = new TextView(getContext());
+        ScrollView scrollView = new ScrollView(getContext());
+        scrollView.setLayoutParams(new FrameLayout.LayoutParams(
+                FrameLayout.LayoutParams.MATCH_PARENT,
+                FrameLayout.LayoutParams.WRAP_CONTENT));
+        TextView tvMessage = new TextView(getContext(), null,
+                R.style.dialog_pinterest_text);
         tvMessage.setLayoutParams(new FrameLayout.LayoutParams(
                 FrameLayout.LayoutParams.MATCH_PARENT,
                 FrameLayout.LayoutParams.WRAP_CONTENT));
         tvMessage.setPadding(contentPadding, contentPadding, contentPadding,
                 contentPadding);
+        tvMessage.setLineSpacing(0.0F, 1.3F);
         tvMessage.setText(spanned);
         tvMessage.setTextColor(getContext().getResources().getColor(
                 R.color.black));
-        tvMessage.setTextSize(1, 16F);
 
-        setContent(tvMessage, 0);
+        ScrollView.LayoutParams lp = new ScrollView.LayoutParams(
+                ScrollView.LayoutParams.MATCH_PARENT,
+                ScrollView.LayoutParams.WRAP_CONTENT);
+        scrollView.addView(tvMessage, lp);
+        setContent(scrollView, 0);
     }
 
     public void setMessage(String message) {

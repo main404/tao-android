@@ -14,6 +14,7 @@ import com.taotete.app.ui.account.activity.LoginActivity;
 import com.taotete.app.ui.base.fragments.BaseFragment;
 import com.taotete.app.ui.settting.SettingActivity;
 import com.taotete.app.ui.user.address.MyAddressActivity;
+import com.taotete.app.ui.user.data.MyDataActivity;
 import com.taotete.app.utils.NetUtils;
 
 import butterknife.Bind;
@@ -110,7 +111,7 @@ public class UserInfoFragment extends BaseFragment implements View.OnClickListen
         }
     }
 
-    @OnClick({R.id.btn_login, R.id.ly_address, R.id.ly_setting})
+    @OnClick({R.id.iv_portrait, R.id.btn_login, R.id.ly_address, R.id.ly_setting})
     @Override
     public void onClick(View v) {
         int id = v.getId();
@@ -125,6 +126,9 @@ public class UserInfoFragment extends BaseFragment implements View.OnClickListen
             }
 
             switch (id) {
+                case R.id.iv_portrait:
+                    MyDataActivity.show(mContext);
+                    break;
                 case R.id.btn_login:
                     LoginActivity.show(mContext);
                     break;

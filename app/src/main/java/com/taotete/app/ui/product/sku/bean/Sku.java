@@ -8,10 +8,10 @@ import java.util.List;
 public class Sku implements Parcelable {
     private String id;
     private String image;
-    private int stockQuantity;
-    private boolean inStock;
-    private long originPrice;
-    private long sellingPrice;
+    private int stock_quantity;
+    private boolean in_stock;
+    private long origin_price;
+    private long selling_price;
     private List<SkuAttribute> attributes;
 
     public String getId() {
@@ -31,35 +31,35 @@ public class Sku implements Parcelable {
     }
 
     public int getStockQuantity() {
-        return stockQuantity;
+        return stock_quantity;
     }
 
     public void setStockQuantity(int stockQuantity) {
-        this.stockQuantity = stockQuantity;
+        this.stock_quantity = stockQuantity;
     }
 
     public boolean isInStock() {
-        return inStock;
+        return in_stock;
     }
 
     public void setInStock(boolean inStock) {
-        this.inStock = inStock;
+        this.in_stock = inStock;
     }
 
     public long getOriginPrice() {
-        return originPrice;
+        return origin_price;
     }
 
     public void setOriginPrice(long originPrice) {
-        this.originPrice = originPrice;
+        this.origin_price = originPrice;
     }
 
     public long getSellingPrice() {
-        return sellingPrice;
+        return selling_price;
     }
 
     public void setSellingPrice(long sellingPrice) {
-        this.sellingPrice = sellingPrice;
+        this.selling_price = sellingPrice;
     }
 
     public List<SkuAttribute> getAttributes() {
@@ -75,10 +75,10 @@ public class Sku implements Parcelable {
         return "Sku{" +
                 "id='" + id + '\'' +
                 ", mainImage='" + image + '\'' +
-                ", stockQuantity=" + stockQuantity +
-                ", inStock=" + inStock +
-                ", originPrice=" + originPrice +
-                ", sellingPrice=" + sellingPrice +
+                ", stockQuantity=" + stock_quantity +
+                ", inStock=" + in_stock +
+                ", originPrice=" + origin_price +
+                ", sellingPrice=" + selling_price +
                 ", attributes=" + attributes +
                 '}';
     }
@@ -95,20 +95,20 @@ public class Sku implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(this.id);
         dest.writeString(this.image);
-        dest.writeInt(this.stockQuantity);
-        dest.writeByte(this.inStock ? (byte) 1 : (byte) 0);
-        dest.writeLong(this.originPrice);
-        dest.writeLong(this.sellingPrice);
+        dest.writeInt(this.stock_quantity);
+        dest.writeByte(this.in_stock ? (byte) 1 : (byte) 0);
+        dest.writeLong(this.origin_price);
+        dest.writeLong(this.selling_price);
         dest.writeTypedList(this.attributes);
     }
 
     protected Sku(Parcel in) {
         this.id = in.readString();
         this.image = in.readString();
-        this.stockQuantity = in.readInt();
-        this.inStock = in.readByte() != 0;
-        this.originPrice = in.readLong();
-        this.sellingPrice = in.readLong();
+        this.stock_quantity = in.readInt();
+        this.in_stock = in.readByte() != 0;
+        this.origin_price = in.readLong();
+        this.selling_price = in.readLong();
         this.attributes = in.createTypedArrayList(SkuAttribute.CREATOR);
     }
 
